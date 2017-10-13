@@ -11,12 +11,12 @@ div {
 	display: block;
 }
 
-.title {
+.main-banner {
 	background-color: black;
 	color: white;
 }
 
-.title .container {
+.main-banner .container {
 	background-color: black;
 	color: white;
 	margin: 0 auto;
@@ -65,12 +65,22 @@ header .company {
 	font-size: 2rem;
 }
 
-.topnav {
+/* navigation */ 
+
+nav {
 	background-color: firebrick;
 	color: white;
+}
+
+nav ul {
 	display: flex;
-	justify-content: space-around;
-	padding: 0.75rem;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0.75rem 0;
+}
+
+.mobilenav{
+	display: none;
 }
 
 .items, .info-box {
@@ -127,5 +137,69 @@ footer .container {
 /* le queries */
 
 @media screen and (max-width: 1024px) {
-	
+	body {
+		font-size: 16px;
+	}
+	nav ul {
+		display: none;
+	}
+	.mobilenav {
+		display: block;
+		text-align: center;
+	}
 }
+
+@media screen and (max-width: 1024px) {
+	#items .item {
+		width: 47%;
+	}
+	.items .glasses {
+		display: none;
+	}
+	.info {
+		width: 35%;
+	}
+}
+
+@media screen and (max-width: 470px) {
+	body {
+		font-size: 16px;
+	}
+	.banner {
+		height: 15rem;
+	}
+	.healine {
+		width: 100%;
+		padding: 1rem 2rem;
+		top: 10rem;
+	}
+	.headline h4 {
+		font-size: 0.77rem;
+	}
+	.headline h1 {
+		font-size: 1rem;
+	}
+}
+
+@media screen and (max-width: 470px) {
+	#items, .info{
+		display: block;
+		flex-wrap: wrap;
+	}
+	#items .item {
+		width: 90%;
+		margin: auto;
+	}
+	.items .watch {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 470px) {
+	footer {
+		text-align: center;
+	}
+}
+
+
+
