@@ -182,9 +182,13 @@ footer .container {
 }
 
 @media screen and (max-width: 470px) {
-	#items, .info{
+	#items, .info-box{
+		flex-flow: column wrap;
+	}
+	.info {
+		width: 90%;
 		display: block;
-		flex-wrap: wrap;
+		margin: 0.5rem auto;
 	}
 	#items .item {
 		width: 90%;
